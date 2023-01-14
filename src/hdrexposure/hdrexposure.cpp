@@ -142,7 +142,7 @@ public:
         glBindTexture(GL_TEXTURE_2D, texture);
         glUseProgram(program);
         glViewport(0, 0, info.windowWidth, info.windowHeight);
-        glUniform1f(0, exposure);
+        glUniform1f(glGetUniformLocation(program, "exposure"), exposure);
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
         char buffer[1024];

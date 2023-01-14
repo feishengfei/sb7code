@@ -105,8 +105,8 @@ void stereo_app::init()
 
     info.flags.fullscreen = 1;
     info.flags.stereo = 1;
-    info.windowWidth = 0;
-    info.windowHeight = 0;
+    info.windowWidth =  glfwGetVideoMode(glfwGetPrimaryMonitor())->width;
+    info.windowHeight = glfwGetVideoMode(glfwGetPrimaryMonitor())->height;
 
     static const char title[] = "OpenGL SuperBible - Texture Coordinates";
 

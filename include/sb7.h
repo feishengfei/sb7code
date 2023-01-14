@@ -49,7 +49,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
+#define _DEBUG
 namespace sb7
 {
 
@@ -96,7 +96,7 @@ public:
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
         glfwWindowHint(GLFW_SAMPLES, info.samples);
-        glfwWindowHint(GLFW_STEREO, info.flags.stereo ? GL_TRUE : GL_FALSE);
+//        glfwWindowHint(GLFW_STEREO, info.flags.stereo ? GL_TRUE : GL_FALSE);
 //        if (info.flags.fullscreen)
 //        {
 //            if (info.windowWidth == 0 || info.windowHeight == 0)

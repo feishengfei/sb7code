@@ -168,8 +168,11 @@ void prefixsum_app::load_shaders()
     glGetIntegerv(GL_MAX_SHADER_STORAGE_BUFFER_BINDINGS, &n);
     */
 
+    /* following lines will have side effect on mapping output
+     * from gpu memory to cpu memory
     glShaderStorageBlockBinding(prefix_sum_prog, 0, 0);
     glShaderStorageBlockBinding(prefix_sum_prog, 1, 1);
+    */
 }
 
 void prefixsum_app::prefix_sum(const float * input, float * output, int elements)

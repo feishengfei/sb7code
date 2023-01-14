@@ -25,7 +25,7 @@
 #include <vmath.h>
 
 // Remove this to draw only a single cube!
-// #define MANY_CUBES
+#define MANY_CUBES
 
 class singlepoint_app : public sb7::application
 {
@@ -176,6 +176,7 @@ class singlepoint_app : public sb7::application
 
         glUseProgram(program);
 
+        proj_matrix = vmath::perspective(50.0f, 1.3, 0.1f, 1000.0f);
         glUniformMatrix4fv(proj_location, 1, GL_FALSE, proj_matrix);
 
 #ifdef MANY_CUBES

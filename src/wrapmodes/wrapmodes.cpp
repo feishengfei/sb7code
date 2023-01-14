@@ -127,7 +127,7 @@ public:
 
         for (int i = 0; i < 4; i++)
         {
-            glUniform2fv(0, 1, &offsets[i * 2]);
+            glUniform2fv(glGetUniformLocation(program, "offset"), 1, &offsets[i * 2]);
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrapmodes[i]);
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapmodes[i]);
 

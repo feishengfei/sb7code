@@ -161,6 +161,12 @@ unsigned int load(const char * filename, unsigned int tex)
         goto fail_header;
     }
 
+    // hacked for mirrorclampedge
+    if (h.glinternalformat == GL_RGB) {
+        // flare.ktx is GL_RGB32F size
+        h.glinternalformat = GL_RGB32F;
+    }
+
     // Guess target (texture type)
     if (h.pixelheight == 0)
     {

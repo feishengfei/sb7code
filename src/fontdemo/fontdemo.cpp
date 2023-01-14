@@ -70,7 +70,7 @@ class fontdemo_app : public sb7::application
             text_overlay.drawText(buffer, 0, 16);
         }
 
-        glClearBufferfv(GL_COLOR, 0, sb7::color::Green);
+        glClearBufferfv(GL_COLOR, 0, sb7::color::Black);
 
         glViewport(0, 0, info.windowWidth, info.windowHeight);
 

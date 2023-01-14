@@ -93,7 +93,7 @@ void mirrorclamp_app::render(double T)
 
     glClearBufferfv(GL_COLOR, 0, sb7::color::Black);
 
-    Sleep(1);
+    //Sleep(1);
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, input_texture);

@@ -90,7 +90,7 @@ void cubicfilter_app::render(double currentTime)
 
     glUseProgram(draw_tex_program);
 
-    Sleep(20);
+    //Sleep(20);
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, source_tex);
